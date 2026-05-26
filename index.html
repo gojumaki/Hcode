@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>고원일 | 마케팅 기획자 포트폴리오</title>
+    <meta name="description" content="1%의 데이터로 방향을 잡고, 크리에이티브로 효율을 증명하는 마케팅 기획자 고원일입니다.">
+    
+    <!-- CSS 스타일 통합 영역 -->
+    <style>
+        /* ==========================================================================
+           1. 디자인 시스템 & 전역 설정 (Slate Navy Theme)
+           ========================================================================== */
+        :root {
+            --primary-color: #0f172a;   /* 메인: 깊은 신뢰감을 주는 슬레이트 네이비 */
+            --secondary-color: #334155; /* 서브: 이성적이고 차분한 차콜 그레이 */
+            --text-muted: #64748b;      /* 설명/태그: 정갈한 슬레이트 그레이 */
+            --bg-light: #f8fafc;        /* 배경: 눈이 편안한 소프트 매트 화이트 */
+            --bg-white: #ffffff;
+            --font-main: 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: var(--font-main);
+            letter-spacing: -0.03em; /* 마케팅 페이지 특유의 압축된 세련미를 위한 자간 */
+        }
+
+        body {
+            background-color: var(--bg-white);
+            color: var(--primary-color);
+            line-height: 1.7;
+        }
+
+        /* ==========================================================================
+           2. 네비게이션 헤더
+           ========================================================================== */
+        .navbar {
+            position: fixed;
+            top: 0; width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .navbar .logo {
+            font-size: 1.1rem;
+            font-weight: 800;
+            letter-spacing: 0.05em;
+            color: var(--primary-color);
+        }
+
+        .navbar nav ul {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .navbar nav a {
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--secondary-color);
+            transition: color 0.3s ease;
+        }
+
+        .navbar nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* ==========================================================================
+           3. 히어로 섹션 (요청하신 메인/서브 카피 완벽 반영)
+           ========================================================================== */
+        .hero-section {
+            height: 100vh;
+            min-height: 750px;
+            display: flex;
+            align-items: center;
+            padding: 0 8%;
+            background-color: var(--bg-white);
+        }
+
+        .hero-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            flex: 1.3;
+        }
+
+        .hero-text .sub-copy {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+        }
+
+        .hero-text .main-copy {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1.35;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            word-break: keep-all;
+        }
+
+        .hero-text .description-copy {
+            font-size: 1.05rem;
+            color: var(--secondary-color);
+            margin-bottom: 40px;
+            line-height: 1.75;
+            word-break: keep-all;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn-primary, .btn-secondary {
+            display: inline-block;
+            padding: 15px 38px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--bg-white);
+        }
+
+        .btn-primary:hover {
+            background-color: #1e293b;
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid #cbd5e1;
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--bg-light);
+            border-color: var(--primary-color);
+        }
+
+        .hero-image-area {
+            flex: 0.7;
+            display: flex;
+            justify-content: center;
+        }
+
+        .image-wrapper {
+            position: relative;
+            width: 100%;
+            max-width: 340px;
+            aspect-ratio: 3 / 4;
+            background-color: var(--bg-light);
+            border-radius: 6px;
+            overflow: hidden;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.04);
+        }
+
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+            display: block;
+        }
+
+        .img-fallback {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            z-index: 1;
+        }
+
+        /* ==========================================================================
+           4. 본문 구조 및 기술 스택(Skills) 3단 레이아웃
+           ========================================================================== */
+        .section {
+            padding: 140px 8%;
+        }
+
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .container-sm {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .section-tag {
+            display: block;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 0.15em;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 45px;
+            color: var(--primary-color);
+        }
+
+        h2.left-align {
+            text-align: left;
+        }
+
+        .philosophy-text {
+            font-size: 1.15rem;
+            color: var(--secondary-color);
+            word-break: keep-all;
+        }
+
+        /* 기술 역량 그리드 */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .skill-category {
+            flex: 1;
+            min-width: 280px;
+            background-color: var(--bg-light);
+            padding: 45px 35px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .skill-category h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .skill-category .skill-desc {
+            font-size: 0.95rem;
+            color: var(--secondary-color);
+            line-height: 1.65;
+        }
+
+        /* ==========================================================================
+           5. 프로젝트 목록 레이아웃
+           ========================================================================== */
+        .project-list {
+            margin-top: 30px;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .project-item {
+            display: flex;
+            padding: 50px 0;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .project-item .proj-num {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-muted);
+            width: 100px;
+            padding-top: 5px;
+        }
+
+        .project-item .proj-content h3 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        .project-item .proj-content p {
+            color: var(--secondary-color);
+            font-size: 1rem;
+        }
+
+        /* ==========================================================================
+           6. 콘택트 폼 (향후 DB 연동 준비)
+           ========================================================================== */
+        .contact-desc {
+            color: var(--secondary-color);
+            margin-bottom: 45px;
+        }
+
+        .dark-form {
+            text-align: left;
+            background-color: var(--bg-white);
+            padding: 50px;
+            border-radius: 6px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.02);
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #cbd5e1;
+            font-size: 0.95rem;
+            border-radius: 4px;
+            outline: none;
+            color: var(--primary-color);
+            transition: border-color 0.3s ease;
+        }
+
+        .form-group input:focus, .form-group textarea:focus {
+            border-color: var(--primary-color);
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 16px;
+            background-color: var(--primary-color);
+            color: var(--bg-white);
+            border: none;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #1e293b;
+        }
+
+        /* ==========================================================================
+           7. 푸터
+           ========================================================================== */
+        footer {
+            text-align: center;
+            padding: 50px;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid #e2e8f0;
+            background-color: var(--bg-white);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 상단 고정 네비게이션 -->
+    <header class="navbar">
+        <div class="logo">KOH WONIL</div>
+        <nav>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- 상단 히어로 섹션 (요청 카피 적용 완료) -->
+        <section id="hero" class="hero-section">
+            <div class="hero-container">
+                <!-- 좌측: 카피라이팅 영역 -->
+                <div class="hero-text">
+                    <p class="sub-copy">PERFORMANCE & CONTENT MARKETING PLANNER</p>
+                    <h1 class="main-copy">
+                        1%의 데이터로 방향을 잡고,<br>
+                        크리에이티브로 효율을 증명합니다.
+                    </h1>
+                    <p class="description-copy">
+                        구글·네이버 매체 광고 집행을 통한 데이터 기반의 퍼포먼스 마케팅과, Adobe 툴을 활용한 비주얼/영상 콘텐츠 제작을 동시에 수행합니다. 기획부터 집행, 소재 제작까지 마케팅의 전체 사이클을 융합하여 비용 대비 최고의 전환율을 만들어냅니다.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn-primary">프로젝트 보기</a>
+                        <a href="#contact" class="btn-secondary">협업 문의</a>
+                    </div>
+                </div>
+                
+                <!-- 우측: 프로필 사진 영역 -->
+                <div class="hero-image-area">
+                    <div class="image-wrapper">
+                        <!-- 메모장 파일과 같은 폴더에 본인 사진을 넣고 이름을 'profile.jpg'로 맞춰주세요 -->
+                        <img src="profile.jpg" alt="고원일 프로필 사진" class="profile-img">
+                        <div class="img-fallback">PROFILE IMAGE</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 핵심 역량 요약 (About) -->
+        <section id="about" class="section bg-light">
+            <div class="container-sm">
+                <span class="section-tag">CORE VALUE</span>
+                <h2>기획부터 집행, 제작까지 한 번에</h2>
+                <p class="philosophy-text">
+                    단순히 예쁜 콘텐츠를 만드는 것에 머무르지 않고, 시장과 소비자의 행동 패턴을 분석하여 '전환을 일으키는 마케팅'을 지향합니다. 매체 트래픽을 효율적으로 통제하는 퍼포먼스적 사고와, 타겟의 시선을 사로잡는 콘텐츠 크리에이티브의 균형을 유지합니다.
+                </p>
+            </div>
+        </section>
+
+        <!-- 핵심 도구 역량 (Skills) -->
+        <section id="skills" class="section">
+            <div class="container">
+                <span class="section-tag">KEY SKILLS</span>
+                <h2 class="left-align">마케팅 및 핵심 도구 역량</h2>
+                
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>Paid Media & Data</h3>
+                        <p class="skill-desc">구글 애즈(Google Ads) 및 네이버 검색/성과형 광고 매체를 직접 집행하고, 유입 경로와 키워드 데이터를 분석하여 광고 효율(ROAS)을 극대화합니다.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Creative Content Design</h3>
+                        <p class="skill-desc">Adobe Photoshop, Illustrator를 활용한 비주얼 광고 배너 제작부터 Premiere Pro를 활용한 숏폼/릴스 등 영상 콘텐츠 마케팅의 전 과정을 소화합니다.</p>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Strategy & Documentation</h3>
+                        <p class="skill-desc">콘텐츠 마케팅에 대한 깊은 이해를 바탕으로, 시장 조사 분석 및 마케팅 전략 제안서 등 정형화된 비즈니스 문서를 논리적으로 작성합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 프로젝트 섹션 -->
+        <section id="projects" class="section bg-light">
+            <div class="container">
+                <span class="section-tag">PROJECTS</span>
+                <h2 class="left-align">마케팅 프로젝트 실적</h2>
+                
+                <div class="project-list">
+                    <article class="project-item">
+                        <div class="proj-num">01</div>
+                        <div class="proj-content">
+                            <h3>브랜드 소셜 채널 콘텐츠 마케팅 운영</h3>
+                            <p>타겟 분석을 바탕으로 한 비주얼 콘셉트 정립, Adobe 툴을 활용한 그래픽 배너 및 숏폼 영상 제작 및 채널 활성화</p>
+                        </div>
+                    </article>
+
+                    <article class="project-item">
+                        <div class="proj-num">02</div>
+                        <div class="proj-content">
+                            <h3>SA/DA 매체 광고 집행 및 최적화</h3>
+                            <p>네이버 및 구글 애즈를 통한 타겟팅 광고 설계, AB 테스트용 소재 직접 제작을 통한 유입 단가(CPC) 개선 프로젝트</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 문의 섹션 (DB 연동 구조) -->
+        <section id="contact" class="section">
+            <div class="container-sm">
+                <span class="section-tag">CONTACT</span>
+                <h2>프로젝트 및 채용 제안</h2>
+                <p class="contact-desc">데이터와 크리에이티브를 겸비한 마케팅 기획자를 찾고 계신다면, 메시지를 남겨주세요.</p>
+                
+                <form action="insert_contact.php" method="POST" class="dark-form">
+                    <div class="form-group">
+                        <label for="name">성함 / 기업명</label>
+                        <input type="text" id="name" name="name" required placeholder="예: 인사담당자">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">이메일 주소</label>
+                        <input type="email" id="email" name="email" required placeholder="manager@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">상세 내용</label>
+                        <textarea id="message" name="message" rows="6" required placeholder="제안하시는 포지션 또는 마케팅 프로젝트 내용을 입력해주세요."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn-submit">메시지 전송</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 KOH WONIL. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
