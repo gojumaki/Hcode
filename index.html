@@ -13,9 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>비주얼과 효율을 더하다 | 마케팅 기획자 고우혁</title>
+    <!-- [유지] 메타 디스크립션은 절대 변경하지 않았습니다 -->
     <meta name="description" content="Adobe 툴을 활용한 고감도 콘텐츠 기획부터 워크플로우를 혁신하는 마케팅 자동화까지, 디테일로 성과를 만드는 마케팅 기획자 고우혁입니다.">
 
-    <!-- 구글 럭셔리 폰트 임포트 (Cormorant Garamond: 하이엔드 명조체 / Pretendard: 본문용 고딕) -->
+    <!-- 구글 럭셔리 폰트 임포트 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Pretendard:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -53,7 +54,7 @@
         "Data-Driven Marketing Strategy"
       ],
       "sameAs": [
-        "https://www.instagram.com/accounts/onetap/",
+        "https://www.instagram.com/wonwill_/",
         "https://www.youtube.com/@oo_hyexk-ko",
         "https://gojumaki.github.io/Hcode/",
         "https://github.com/gojumaki"
@@ -74,11 +75,11 @@
     
     <style>
         :root {
-            --bg-color: #0b0b0d;        /* 오닉스 블랙: 디올/입생로랑 쇼룸 톤 */
-            --text-pure: #ffffff;       /* 순백색 */
-            --text-neutral: #a1a1aa;    /* 차분한 에디토리얼 그레이 */
-            --text-dim: #52525b;        /* 극도로 절제된 다크 그레이 */
-            --border-fine: #27272a;     /* 하이엔드 가구처럼 섬세하고 얇은 선색 */
+            --bg-color: #0b0b0d;        
+            --text-pure: #ffffff;       
+            --text-neutral: #a1a1aa;    
+            --text-dim: #52525b;        
+            --border-fine: #27272a;     
             --font-serif: 'Cormorant Garamond', serif;
             --font-sans: 'Pretendard', sans-serif;
         }
@@ -96,7 +97,6 @@
             overflow-x: hidden;
         }
 
-        /* 럭셔리 브랜드의 대담한 여백 프레임 */
         #frame-wrapper {
             border-left: 1px solid var(--border-fine);
             border-right: 1px solid var(--border-fine);
@@ -105,9 +105,7 @@
             position: relative;
         }
 
-        /* ==========================================================================
-           1. 미니멀 럭셔리 헤더
-           ========================================================================== */
+        /* 1. 헤더 */
         .header {
             position: fixed;
             top: 0; left: 4%; right: 4%;
@@ -149,9 +147,7 @@
             color: var(--text-pure);
         }
 
-        /* ==========================================================================
-           2. 에디토리얼 히어로 섹션 (비대칭 레이아웃)
-           ========================================================================== */
+        /* 2. 히어로 섹션 */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -207,7 +203,6 @@
             word-break: keep-all;
         }
 
-        /* 럭셔리 매거진 스타일 버튼 */
         .cta-group {
             display: flex; gap: 30px;
         }
@@ -222,6 +217,7 @@
             padding: 16px 40px;
             border: 1px solid var(--text-pure);
             position: relative;
+            z-index: 1;
             transition: all 0.4s ease;
         }
 
@@ -252,7 +248,6 @@
             border-bottom-color: var(--text-pure);
         }
 
-        /* 고대비 흑백 룩앤필 프로필 프레임 */
         .hero-right {
             display: flex; justify-content: center;
         }
@@ -268,17 +263,15 @@
 
         .portrait-frame img {
             width: 100%; height: 100%; object-fit: cover;
-            filter: grayscale(100%) contrast(110%); /* 입생로랑 특유의 하이 콘트라스트 모노톤 무드 */
+            filter: grayscale(100%) contrast(110%); 
             transition: filter 0.5s ease;
         }
 
         .portrait-frame:hover img {
-            filter: grayscale(0%) contrast(100%); /* 호버 시에만 오리지널 컬러가 서서히 선명해짐 */
+            filter: grayscale(0%) contrast(100%); 
         }
 
-        /* ==========================================================================
-           3. 에디토리얼 소개 섹션 (About)
-           ========================================================================== */
+        /* 3. About 섹션 */
         .section {
             padding: 140px 6%;
             border-bottom: 1px solid var(--border-fine);
@@ -321,14 +314,12 @@
             color: var(--text-pure);
         }
 
-        /* ==========================================================================
-           4. 정밀 구조화된 역량 레이아웃 (Skills)
-           ========================================================================== */
+        /* 4. Skills 섹션 */
         .skills-matrix {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 1px;
-            background-color: var(--border-fine); /* 그리드 선을 선명한 라인으로 표현 */
+            background-color: var(--border-fine); 
             border: 1px solid var(--border-fine);
         }
 
@@ -359,9 +350,7 @@
             font-weight: 300;
         }
 
-        /* ==========================================================================
-           5. 럭셔리 아카이브 리스트 (Projects)
-           ========================================================================== */
+        /* 5. Projects 섹션 */
         .archive-list {
             border-top: 1px solid var(--border-fine);
         }
@@ -401,9 +390,7 @@
             text-align: right;
         }
 
-        /* ==========================================================================
-           6. 시네마틱 흑백 콘택트 스튜디오 (Contact)
-           ========================================================================== */
+        /* 6. Contact 섹션 */
         .contact-layout {
             display: grid;
             grid-template-columns: 0.8fr 1.2fr;
@@ -463,9 +450,7 @@
             color: var(--bg-color);
         }
 
-        /* ==========================================================================
-           7. 미니멀 푸터
-           ========================================================================== */
+        /* 7. 푸터 및 하이엔드 인스타 링크 링크 스타일 */
         .footer {
             padding: 50px 40px;
             display: flex;
@@ -475,6 +460,18 @@
             letter-spacing: 0.1em;
             color: var(--text-dim);
             text-transform: uppercase;
+        }
+
+        .footer .footer-instagram {
+            color: var(--text-dim);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .footer .footer-instagram:hover {
+            color: var(--text-pure);
+            border-bottom-color: var(--text-pure);
         }
 
         /* 반응형 모바일 아키텍처 */
@@ -623,10 +620,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <!-- 푸터 -->
+        <!-- 푸터 (인스타그램 링크 연동 완료) -->
         <footer class="footer">
             <div>&copy; 2026 Koh Woo Hyuk</div>
-            <div>Designed for Excellence</div>
+            <div><a href="https://www.instagram.com/wonwill_/" target="_blank" rel="noopener noreferrer" class="footer-instagram">Designed for Excellence</a></div>
         </footer>
     </div>
 </body>
