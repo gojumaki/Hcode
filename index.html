@@ -603,7 +603,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
  -->                      <!-- 1차 초안 ---------------------------------------------------------------------------------------- -->
 
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="ko">
 <head>
     <!-- Google Tag Manager -->
@@ -1313,8 +1313,643 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </footer>
 
 </body>
-</html>
+</html> -->
 
+
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-T6JBSMSZ');</script>
+    <!-- End Google Tag Manager -->
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>비주얼과 효율을 더하다 | 마케팅 기획자 고우혁</title>
+    <meta name="description" content="Adobe 툴을 활용한 고감도 콘텐츠 기획부터 워크플로우를 혁신하는 마케팅 자동화까지, 디테일로 성과를 만드는 마케팅 기획자 고우혁입니다.">
+
+    <!-- 구글 럭셔리 폰트 임포트 (Cormorant Garamond: 하이엔드 명조체 / Pretendard: 본문용 고딕) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,500;1,300&family=Pretendard:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- 구조화 데이터 스키마 마크업 (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "고우혁",
+      "alternateName": "Ko Woo Hyuk",
+      "description": "Adobe 사진·영상 편집 감각과 문서/마케팅 자동화 기술을 겸비하여 실질적인 전환율을 만드는 마케팅 기획자입니다.",
+      "url": "https://gojumaki.github.io/Hcode/",
+      "image": "https://gojumaki.github.io/Hcode/profile.jpg",
+      "email": "mailto:your-email@example.com",
+      "jobTitle": "Digital Marketer & Visual Designer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Inha Technical College"
+      },
+      "knowsAbout": [
+        "Digital Marketing",
+        "Visual Branding",
+        "Content Strategy",
+        "AIGC Automation",
+        "UI/UX Design",
+        "Google Ads",
+        "Naver Analytics"
+      ],
+      "skills": [
+        "Adobe Photoshop",
+        "Adobe Illustrator",
+        "Video Editing",
+        "Marketing Automation",
+        "Data-Driven Marketing Strategy"
+      ],
+      "sameAs": [
+        "https://www.instagram.com/accounts/onetap/",
+        "https://www.youtube.com/@oo_hyexk-ko",
+        "https://gojumaki.github.io/Hcode/",
+        "https://github.com/gojumaki"
+      ],
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://gojumaki.github.io/Hcode/"
+      }
+    }
+    </script>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://gojumaki.github.io/Hcode/">
+    <meta property="og:title" content="비주얼과 효율을 더하다 | 마케팅 기획자 고우혁">
+    <meta property="og:description" content="Adobe 툴을 활용한 고감도 콘텐츠 기획부터 워크플로우를 혁신하는 마케팅 자동화까지, 디테일로 성과를 만드는 마케팅 기획자 고우혁입니다.">
+    <meta property="og:image" content="https://gojumaki.github.io/Hcode/profile.jpg">
+    
+    <style>
+        :root {
+            --bg-color: #0b0b0d;        /* 오닉스 블랙: 디올/입생로랑 쇼룸 톤 */
+            --text-pure: #ffffff;       /* 순백색 */
+            --text-neutral: #a1a1aa;    /* 차분한 에디토리얼 그레이 */
+            --text-dim: #52525b;        /* 극도로 절제된 다크 그레이 */
+            --border-fine: #27272a;     /* 하이엔드 가구처럼 섬세하고 얇은 선색 */
+            --font-serif: 'Cormorant Garamond', serif;
+            --font-sans: 'Pretendard', sans-serif;
+        }
+
+        * {
+            margin: 0; padding: 0; box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-pure);
+            font-family: var(--font-sans);
+            line-height: 1.7;
+            letter-spacing: -0.03em;
+            overflow-x: hidden;
+        }
+
+        /* 럭셔리 브랜드의 대담한 여백 프레임 */
+        #frame-wrapper {
+            border-left: 1px solid var(--border-fine);
+            border-right: 1px solid var(--border-fine);
+            margin: 0 4%;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* ==========================================================================
+           1. 미니멀 럭셔리 헤더
+           ========================================================================== */
+        .header {
+            position: fixed;
+            top: 0; left: 4%; right: 4%;
+            height: 90px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 40px;
+            background: rgba(11, 11, 13, 0.85);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--border-fine);
+            z-index: 1000;
+        }
+
+        .header .brand-logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            font-weight: 300;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        .header nav ul {
+            display: flex; gap: 50px; list-style: none;
+        }
+
+        .header nav a {
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 400;
+            color: var(--text-neutral);
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .header nav a:hover {
+            color: var(--text-pure);
+        }
+
+        /* ==========================================================================
+           2. 에디토리얼 히어로 섹션 (비대칭 레이아웃)
+           ========================================================================== */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 140px 6% 80px 6%;
+            border-bottom: 1px solid var(--border-fine);
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+            width: 100%;
+        }
+
+        .hero-left .tagline {
+            font-family: var(--font-serif);
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-neutral);
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-left .statement {
+            font-family: var(--font-serif);
+            font-size: 4.2rem;
+            font-weight: 300;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+            margin-bottom: 40px;
+            word-break: keep-all;
+        }
+
+        .hero-left .statement span {
+            font-family: var(--font-sans);
+            font-weight: 700;
+            font-size: 3.8rem;
+            display: block;
+            margin-top: 10px;
+            color: var(--text-pure);
+            letter-spacing: -0.04em;
+        }
+
+        .hero-left .sub-statement {
+            font-size: 1rem;
+            color: var(--text-neutral);
+            max-width: 540px;
+            line-height: 1.9;
+            margin-bottom: 50px;
+            font-weight: 300;
+            word-break: keep-all;
+        }
+
+        /* 럭셔리 매거진 스타일 버튼 */
+        .cta-group {
+            display: flex; gap: 30px;
+        }
+
+        .btn-luxury {
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-pure);
+            padding: 16px 40px;
+            border: 1px solid var(--text-pure);
+            position: relative;
+            transition: all 0.4s ease;
+        }
+
+        .btn-luxury::before {
+            content: ''; position: absolute; top: 0; left: 0; width: 0; height: 100%;
+            background: var(--text-pure); z-index: -1;
+            transition: width 0.4s ease;
+        }
+
+        .btn-luxury:hover { color: var(--bg-color); }
+        .btn-luxury:hover::before { width: 100%; }
+
+        .btn-link {
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-neutral);
+            align-self: center;
+            border-bottom: 1px solid var(--text-dim);
+            padding-bottom: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-link:hover {
+            color: var(--text-pure);
+            border-bottom-color: var(--text-pure);
+        }
+
+        /* 고대비 흑백 룩앤필 프로필 프레임 */
+        .hero-right {
+            display: flex; justify-content: center;
+        }
+
+        .portrait-frame {
+            width: 100%; max-width: 380px;
+            aspect-ratio: 3 / 4;
+            background-color: #121214;
+            border: 1px solid var(--border-fine);
+            padding: 15px;
+            position: relative;
+        }
+
+        .portrait-frame img {
+            width: 100%; height: 100%; object-fit: cover;
+            filter: grayscale(100%) contrast(110%); /* 입생로랑 특유의 하이 콘트라스트 모노톤 무드 */
+            transition: filter 0.5s ease;
+        }
+
+        .portrait-frame:hover img {
+            filter: grayscale(0%) contrast(100%); /* 호버 시에만 오리지널 컬러가 서서히 선명해짐 */
+        }
+
+        /* ==========================================================================
+           3. 에디토리얼 소개 섹션 (About)
+           ========================================================================== */
+        .section {
+            padding: 140px 6%;
+            border-bottom: 1px solid var(--border-fine);
+        }
+
+        .section-header {
+            margin-bottom: 80px;
+        }
+
+        .section-header .num {
+            font-family: var(--font-serif);
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--text-dim);
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .editorial-text {
+            font-family: var(--font-serif);
+            font-size: 1.6rem;
+            font-weight: 300;
+            line-height: 1.8;
+            color: var(--text-neutral);
+            max-width: 900px;
+            word-break: keep-all;
+        }
+
+        .editorial-text strong {
+            font-family: var(--font-sans);
+            font-weight: 700;
+            color: var(--text-pure);
+        }
+
+        /* ==========================================================================
+           4. 정밀 구조화된 역량 레이아웃 (Skills)
+           ========================================================================== */
+        .skills-matrix {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1px;
+            background-color: var(--border-fine); /* 그리드 선을 선명한 라인으로 표현 */
+            border: 1px solid var(--border-fine);
+        }
+
+        .matrix-cell {
+            background-color: var(--bg-color);
+            padding: 60px 40px;
+        }
+
+        .matrix-cell .cell-no {
+            font-family: var(--font-serif);
+            font-size: 0.95rem;
+            color: var(--text-dim);
+            display: block;
+            margin-bottom: 30px;
+        }
+
+        .matrix-cell h3 {
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            letter-spacing: -0.01em;
+        }
+
+        .matrix-cell p {
+            font-size: 0.9rem;
+            color: var(--text-neutral);
+            line-height: 1.8;
+            font-weight: 300;
+        }
+
+        /* ==========================================================================
+           5. 럭셔리 아카이브 리스트 (Projects)
+           ========================================================================== */
+        .archive-list {
+            border-top: 1px solid var(--border-fine);
+        }
+
+        .archive-row {
+            display: grid;
+            grid-template-columns: 0.5fr 1.5fr 1fr;
+            padding: 50px 20px;
+            border-bottom: 1px solid var(--border-fine);
+            text-decoration: none;
+            color: inherit;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+
+        .archive-row:hover {
+            background-color: #121214;
+        }
+
+        .archive-row .meta {
+            font-family: var(--font-serif);
+            font-size: 1rem;
+            font-style: italic;
+            color: var(--text-dim);
+        }
+
+        .archive-row .title {
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--text-pure);
+        }
+
+        .archive-row .desc {
+            font-size: 0.9rem;
+            color: var(--text-neutral);
+            font-weight: 300;
+            text-align: right;
+        }
+
+        /* ==========================================================================
+           6. 시네마틱 흑백 콘택트 스튜디오 (Contact)
+           ========================================================================== */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 60px;
+        }
+
+        .contact-info p {
+            font-size: 1.05rem;
+            color: var(--text-neutral);
+            font-weight: 300;
+            margin-bottom: 30px;
+            word-break: keep-all;
+        }
+
+        .minimal-input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border-fine);
+            padding: 20px 0;
+            font-size: 1rem;
+            color: var(--text-pure);
+            outline: none;
+            margin-bottom: 40px;
+            font-weight: 300;
+            transition: border-color 0.4s ease;
+        }
+
+        .minimal-input:focus {
+            border-bottom-color: var(--text-pure);
+        }
+
+        .minimal-form label {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--text-neutral);
+            display: block;
+        }
+
+        .btn-submit-luxury {
+            background: transparent;
+            border: 1px solid var(--text-pure);
+            color: var(--text-pure);
+            padding: 20px 0;
+            width: 100%;
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .btn-submit-luxury:hover {
+            background: var(--text-pure);
+            color: var(--bg-color);
+        }
+
+        /* ==========================================================================
+           7. 미니멀 푸터
+           ========================================================================== */
+        .footer {
+            padding: 50px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            color: var(--text-dim);
+            text-transform: uppercase;
+        }
+
+        /* 반응형 모바일 아키텍처 */
+        @media (max-width: 968px) {
+            #frame-wrapper { margin: 0; border: none; }
+            .header { left: 0; right: 0; padding: 0 24px; }
+            .header nav { display: none; }
+            .hero { padding: 120px 24px 60px 24px; }
+            .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+            .hero-left .statement { font-size: 2.8rem; }
+            .hero-left .statement span { font-size: 2.4rem; }
+            .skills-matrix { grid-template-columns: 1fr; }
+            .archive-row { grid-template-columns: 1fr; gap: 10px; padding: 30px 10px; }
+            .archive-row .desc { text-align: left; }
+            .contact-layout { grid-template-columns: 1fr; gap: 40px; }
+        }
+    </style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T6JBSMSZ"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <div id="frame-wrapper">
+        <!-- 메인 헤더 -->
+        <header class="header">
+            <div class="brand-logo">Ko Woo Hyuk</div>
+            <nav>
+                <ul>
+                    <li><a href="#hero">Index</a></li>
+                    <li><a href="#about">Overview</a></li>
+                    <li><a href="#skills">Expertise</a></li>
+                    <li><a href="#projects">Archive</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- 히어로 쇼룸 -->
+        <section id="hero" class="hero">
+            <div class="hero-grid">
+                <div class="hero-left">
+                    <p class="tagline">Performance & Creative Studio</p>
+                    <h1 class="statement">
+                        The art of details, <br>the science of data.
+                        <span>1%의 시선으로<br>완벽을 더하다.</span>
+                    </h1>
+                    <p class="sub-statement">
+                        구글·네이버 매체 마케팅의 정밀한 트래픽 통제력과 Adobe 스튜디오 기반의 고감도 비주얼 크리에이티브를 결합합니다. 분석과 감각의 교차점에서 실질적인 전환율을 증명해 냅니다.
+                    </p>
+                    <div class="cta-group">
+                        <a href="#projects" class="btn-luxury">View Archive</a>
+                        <a href="#contact" class="btn-link">Inquiry</a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="portrait-frame">
+                        <img src="와꾸 정장 누끼.png" alt="고우혁 프로필 이미지">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 브랜드 철학 섹션 (About) -->
+        <section id="about" class="section">
+            <div class="section-header">
+                <span class="num">01 / OVERVIEW</span>
+                <h2>Philosophy</h2>
+            </div>
+            <p class="editorial-text">
+                숫자만 보는 마케팅은 무미건조하고, 비주얼만 쫓는 마케팅은 힘이 없습니다. 시장의 지표를 해석해 명확한 <strong>데이터적 방향성</strong>을 세우고, 타겟의 본능을 자극하는 <strong>고감도 소재</strong>로 소비자를 설득합니다. 마케팅의 전 과정을 유기적으로 연결하여 비즈니스의 확실한 성장을 이끕니다.
+            </p>
+        </section>
+
+        <!-- 핵심 역량 매트릭스 (Skills) -->
+        <section id="skills" class="section">
+            <div class="section-header">
+                <span class="num">02 / EXPERTISE</span>
+                <h2>Core Capabilities</h2>
+            </div>
+            <div class="skills-matrix">
+                <div class="matrix-cell">
+                    <span class="cell-no">I. Paid Media</span>
+                    <h3>매체 집행 및 최적화</h3>
+                    <p>구글 애즈 및 네이버 검색/성과형 광고 시스템을 직접 운용합니다. ROAS 최적화를 목표로 오디언스를 세분화하고 퍼널별 유입 지표를 기민하게 방어합니다.</p>
+                </div>
+                <div class="matrix-cell">
+                    <span class="cell-no">II. Visual Asset</span>
+                    <h3>고감도 콘텐츠 디자인</h3>
+                    <p>Photoshop, Illustrator, Premiere Pro를 다룹니다. 브랜드 톤앤매너에 정밀하게 맞춘 하이엔드 광고 배너 및 몰입감 높은 숏폼 영상 소재를 직접 제작합니다.</p>
+                </div>
+                <div class="matrix-cell">
+                    <span class="cell-no">III. Workflow</span>
+                    <h3>자동화 및 기획</h3>
+                    <p>정교한 콘텐츠 마케팅 전략 기획서를 작성합니다. 단순 반복성 마케팅 워크플로우와 비즈니스 정형 문서를 자동화하여 리소스를 혁신적으로 단축합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 아카이브 섹션 (Projects) -->
+        <section id="projects" class="section">
+            <div class="section-header">
+                <span class="num">03 / ARCHIVE</span>
+                <h2>Selected Works</h2>
+            </div>
+            <div class="archive-list">
+                <div class="archive-row">
+                    <div class="meta">2026 / Branding</div>
+                    <div class="title">소셜 브랜드 채널 총괄 및 비주얼 빌딩</div>
+                    <div class="desc">Creative Direction & Design</div>
+                </div>
+                <div class="archive-row">
+                    <div class="meta">2026 / Performance</div>
+                    <div class="title">SA / DA 매체 데이터 최적화 마케팅</div>
+                    <div class="desc">Media Buying & Analytics</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 콘택트 폼 섹션 -->
+        <section id="contact" class="section">
+            <div class="section-header">
+                <span class="num">04 / INQUIRY</span>
+                <h2>Connect</h2>
+            </div>
+            <div class="contact-layout">
+                <div class="contact-info">
+                    <p>데이터와 비주얼 디자인의 시너지를 통해 브랜드의 가치를 럭셔리하게 끌어올릴 준비가 되어 있습니다.</p>
+                    <p>채용 제안이나 프로젝트 협업에 관한 문의는 우측 제안서를 통해 전달해 주시기 바랍니다.</p>
+                </div>
+                <div class="minimal-form">
+                    <form action="insert_contact.php" method="POST">
+                        <label for="name">Name / Company</label>
+                        <input type="text" id="name" name="name" required class="minimal-input" placeholder="성함 또는 기업명을 기입해주세요.">
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required class="minimal-input" placeholder="연락받으실 이메일 주소를 입력해주세요.">
+
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required class="minimal-input" placeholder="프로젝트 제안 내용을 상세히 공유해주세요."></textarea>
+
+                        <button type="submit" class="btn-submit-luxury">Send Proposal</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- 푸터 -->
+        <footer class="footer">
+            <div>&copy; 2026 Koh Woo Hyuk</div>
+            <div>Designed for Excellence</div>
+        </footer>
+    </div>
+</body>
+</html>
 
 
  
