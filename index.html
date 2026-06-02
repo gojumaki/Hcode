@@ -13,7 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>비주얼과 효율을 더하다 | 마케팅 기획자 고우혁</title>
-    <!-- [유지] 메타 디스크립션은 절대 변경하지 않았습니다 -->
     <meta name="description" content="Adobe 툴을 활용한 고감도 콘텐츠 기획부터 워크플로우를 혁신하는 마케팅 자동화까지, 디테일로 성과를 만드는 마케팅 기획자 고우혁입니다.">
 
     <!-- 구글 럭셔리 폰트 임포트 -->
@@ -248,8 +247,13 @@
             border-bottom-color: var(--text-pure);
         }
 
+        /* 프로필 영역 우측 정렬 및 수직 배치 제어 */
         .hero-right {
-            display: flex; justify-content: center;
+            display: flex; 
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
         }
 
         .portrait-frame {
@@ -269,6 +273,31 @@
 
         .portrait-frame:hover img {
             filter: grayscale(0%) contrast(100%); 
+        }
+
+        /* 프로필 아래 추가된 하이엔드 링크 상자 */
+        .profile-link-btn {
+            display: block;
+            width: 100%;
+            max-width: 380px;
+            margin-top: 15px;
+            padding: 16px 0;
+            border: 1px solid var(--border-fine);
+            background-color: transparent;
+            color: var(--text-neutral);
+            text-decoration: none;
+            text-align: center;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+        }
+
+        .profile-link-btn:hover {
+            background-color: var(--text-pure);
+            border-color: var(--text-pure);
+            color: var(--bg-color);
         }
 
         /* 3. About 섹션 */
@@ -529,9 +558,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
                 <div class="hero-right">
+                    <!-- 프로필 이미지 액자 -->
                     <div class="portrait-frame">
                         <img src="와꾸 정장 누끼.png" alt="고우혁 프로필 이미지">
                     </div>
+                    <!-- [NEW] 프로필 이미지 하단 링크 클릭 상자 -->
+                    <a href="https://www.instagram.com/wonwill_/" target="_blank" rel="noopener noreferrer" class="profile-link-btn">
+                        Connect Instagram
+                    </a>
                 </div>
             </div>
         </section>
@@ -620,7 +654,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
 
-        <!-- 푸터 (인스타그램 링크 연동 완료) -->
+        <!-- 푸터 -->
         <footer class="footer">
             <div>&copy; 2026 Koh Woo Hyuk</div>
             <div><a href="https://www.instagram.com/wonwill_/" target="_blank" rel="noopener noreferrer" class="footer-instagram">Designed for Excellence</a></div>
